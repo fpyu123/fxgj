@@ -24,7 +24,7 @@
             align-items: center;
             position: relative;
             font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
-            background-color: #000; /* 防止图片未加载时全白 */
+            background-color: #000; 
         }
 
         /* 链接容器 */
@@ -32,56 +32,55 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.4); /* 调深了背景遮罩，让金字更明显 */
-            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.6); /* 稍微加深遮罩，对比度更高 */
+            padding: 25px 45px;
             border-radius: 15px;
-            border: 1px solid rgba(184, 134, 11, 0.3); /* 增加淡淡的金边框 */
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 215, 0, 0.4); /* 更亮一点的金边 */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
         }
 
-        /* 核心修改：链接样式 */
+        /* 核心修改：靓丽亮金色链接样式 */
         .link-item {
             display: block;
-            font-size: 26px; /* 略微加大 */
-            font-weight: bold; /* 加粗是清晰的关键 */
+            font-size: 28px; /* 稍微调大一点 */
+            font-weight: 900; /* 使用极致加粗 */
             text-decoration: none;
-            margin: 25px 0;
+            margin: 20px 0;
             padding: 5px 10px;
             transition: all 0.3s ease;
 
-            /* 使用更深的重金属金渐变 */
-            background: linear-gradient(to bottom, #cf9e2e 0%, #8b6508 100%);
+            /* 修改为极其靓丽的高光金渐变 */
+            background: linear-gradient(to bottom, #fff3a0 0%, #ffcf40 50%, #ffbf00 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
 
-            /* 关键：多重阴影确保清晰度 */
-            /* 1像素的深色描边效果 + 下方投影 */
+            /* 关键修改：增加金色发光和黑色描边，防止看不清 */
             text-shadow: 
-                1px 1px 0px rgba(0,0,0,0.8), 
-                2px 2px 4px rgba(0,0,0,0.5);
+                0px 0px 8px rgba(255, 215, 0, 0.5), /* 金色光晕 */
+                2px 2px 2px rgba(0, 0, 0, 1);        /* 纯黑深阴影，把字扣出来 */
         }
 
-        /* 鼠标悬停效果 */
+        /* 鼠标悬停效果：更闪耀 */
         .link-item:hover {
-            transform: scale(1.05);
-            /* 悬停时稍微变亮，增加交互感 */
-            background: linear-gradient(to bottom, #ffd700 0%, #b8860b 100%);
+            transform: scale(1.1);
+            /* 悬停时变为纯白色光芒感 */
+            background: linear-gradient(to bottom, #ffffff 0%, #fff3a0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
         }
 
         /* 响应式适配 */
         @media (max-width: 768px) {
             .link-item {
-                font-size: 20px;
-                margin: 15px 0;
+                font-size: 24px;
+                margin: 18px 0;
             }
             .link-container {
-                padding: 15px 25px;
-                width: 90%;
+                padding: 20px 30px;
+                width: 85%;
             }
         }
     </style>
