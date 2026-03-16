@@ -32,4 +32,64 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* 进一步加深背景遮罩，对比度
+            background-color: rgba(0, 0, 0, 0.7); /* 进一步加深背景遮罩，对比度极高 */
+            padding: 30px 50px; /* 增加内边距 */
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* 增加半透明白边框 */
+            backdrop-filter: blur(12px); /* 增加模糊度 */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        /* 核心修改：链接样式为纯白色 */
+        .link-item {
+            display: block;
+            font-size: 30px; /* 调大字体 */
+            font-weight: 900; /* 使用极致加粗 */
+            text-decoration: none;
+            margin: 20px 0; /* 调整间距 */
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+
+            /* 修改为纯白色 */
+            color: #ffffff; /* 纯白单体颜色 */
+            -webkit-text-fill-color: initial; /* 重置之前的透明填充 */
+            background: none; /* 移除之前的渐变背景 */
+
+            /* 关键修改：增加强黑色描边阴影，确保在任何背景上都清晰 */
+            text-shadow: 
+                0px 0px 10px rgba(0, 0, 0, 0.8), /* 强黑色光晕，增加立体感 */
+                3px 3px 2px rgba(0, 0, 0, 1);    /* 纯黑深阴影，把字扣出来 */
+        }
+
+        /* 鼠标悬停效果：更闪耀 */
+        .link-item:hover {
+            transform: scale(1.1);
+            /* 悬停时变为纯白色光芒感 */
+            color: #ffffff; /* 保持白色 */
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)); /* 悬停时增加白色发光 */
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .link-item {
+                font-size: 26px;
+                margin: 18px 0;
+            }
+            .link-container {
+                padding: 25px 35px;
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="link-container">
+        <a href="https://m518.mos077.com/" class="link-item">皇冠会员入口1</a>
+        <a href="https://m473.mos077.com/" class="link-item">皇冠会员入口2</a>
+        <a href="https://mos066.com/f" class="link-item">皇冠会员入口3</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口1</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口2</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口3</a>
+    </div>
+</body>
+</html>
