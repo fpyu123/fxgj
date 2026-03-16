@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>复兴国际 - 入口导航</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复兴国际 - 平衡清晰版</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        body {
-            min-height: 100vh;
-            /* 修正：增加了一个深色渐变备用，即使图片 unnamed.jpg 不存在，也不会全黑 */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('unnamed.jpg'), #1a1a1a;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-        }
+        /* 页面整体样式 */
+        body {
+            min-height: 100vh;
+            /* 核心修改：降低遮罩的不透明度（从 0.6 调至 0.2），让背景图更亮 */
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('unnamed.jpg'), #1a1a1a;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
 
-        .link-container {
-            width: 90%;
-            max-width: 400px;
-            background-color: rgba(0, 0, 0, 0.85); /* 提高不透明度，确保看清字 */
-            padding: 30px 20px;
-            border-radius: 20px;
-            border: 1px solid #444;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            text-align: center;
-        }
+        /* 链接容器 */
+        .link-container {
+            width: 90%;
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.85); /* 保持容器本身较暗，确保文字清晰 */
+            padding: 30px 20px;
+            border-radius: 20px;
+            border: 1px solid #444;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            text-align: center;
+        }
 
-        /* 单体亮色：纯白色，带极强对比阴影 */
-        .link-item {
-            display: block;
-            color: #FFFFFF; 
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            margin: 15px 0;
-            padding: 15px 10px;
-            background: rgba(255, 255, 255, 0.05); /* 给每个按钮一点微弱的底色感 */
-            border-radius: 10px;
-            transition: all 0.2s ease-in-out;
-            /* 黑色粗体描边，防止在亮色背景下看不清 */
-            text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
-        }
+        /* 单体亮色：纯白色，带极强对比阴影 */
+        .link-item {
+            display: block;
+            color: #FFFFFF; 
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 15px 10px;
+            background: rgba(255, 255, 255, 0.05); /* 给每个按钮一点微弱的底色感 */
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+            /* 黑色粗体描边，防止在亮色背景下看不清 */
+            text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+        }
 
-        .link-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-            color: #FFD700; /* 鼠标指上去变金色 */
-        }
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            color: #FFD700; /* 鼠标指上去变金色 */
+        }
 
-        @media (max-width: 480px) {
-            .link-item { font-size: 20px; }
-        }
-    </style>
+        /* 响应式适配 */
+        @media (max-width: 480px) {
+            .link-item { font-size: 20px; }
+        }
+    </style>
 </head>
 <body>
-    <div class="link-container">
-        <a href="https://m518.mos077.com/" class="link-item">皇冠会员入口1</a>
-        <a href="https://m473.mos077.com/" class="link-item">皇冠会员入口2</a>
-        <a href="https://mos066.com/f" class="link-item">皇冠会员入口3</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口1</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口2</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口3</a>
-    </div>
+    <div class="link-container">
+        <a href="https://m518.mos077.com/" class="link-item">皇冠会员入口1</a>
+        <a href="https://m473.mos077.com/" class="link-item">皇冠会员入口2</a>
+        <a href="https://mos066.com/f" class="link-item">皇冠会员入口3</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口1</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口2</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口3</a>
+    </div>
 </body>
 </html>
