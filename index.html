@@ -1,95 +1,75 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>复兴国际</title>
-    <style>
-        /* 全局样式重置 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复兴国际 - 入口导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* 页面整体样式 */
-        body {
-            min-height: 100vh;
-            background-image: url('unnamed.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
-            background-color: #000; /* 防止图片未加载时全白 */
-        }
+        body {
+            min-height: 100vh;
+            /* 修正：增加了一个深色渐变备用，即使图片 unnamed.jpg 不存在，也不会全黑 */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('unnamed.jpg'), #1a1a1a;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
 
-        /* 链接容器 */
-        .link-container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* 进一步加深背景遮罩，对比度极高 */
-            padding: 30px 50px; /* 增加内边距 */
-            border-radius: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.5); /* 增加半透明白边框 */
-            backdrop-filter: blur(12px); /* 增加模糊度 */
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-        }
+        .link-container {
+            width: 90%;
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.85); /* 提高不透明度，确保看清字 */
+            padding: 30px 20px;
+            border-radius: 20px;
+            border: 1px solid #444;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            text-align: center;
+        }
 
-        /* 核心修改：链接样式为纯白色 */
-        .link-item {
-            display: block;
-            font-size: 30px; /* 调大字体 */
-            font-weight: 900; /* 使用极致加粗 */
-            text-decoration: none;
-            margin: 20px 0; /* 调整间距 */
-            padding: 5px 10px;
-            transition: all 0.3s ease;
+        /* 单体亮色：纯白色，带极强对比阴影 */
+        .link-item {
+            display: block;
+            color: #FFFFFF; 
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 15px 10px;
+            background: rgba(255, 255, 255, 0.05); /* 给每个按钮一点微弱的底色感 */
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+            /* 黑色粗体描边，防止在亮色背景下看不清 */
+            text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+        }
 
-            /* 修改为纯白色 */
-            color: #ffffff; /* 纯白单体颜色 */
-            -webkit-text-fill-color: initial; /* 重置之前的透明填充 */
-            background: none; /* 移除之前的渐变背景 */
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            color: #FFD700; /* 鼠标指上去变金色 */
+        }
 
-            /* 关键修改：增加强黑色描边阴影，确保在任何背景上都清晰 */
-            text-shadow: 
-                0px 0px 10px rgba(0, 0, 0, 0.8), /* 强黑色光晕，增加立体感 */
-                3px 3px 2px rgba(0, 0, 0, 1);    /* 纯黑深阴影，把字扣出来 */
-        }
-
-        /* 鼠标悬停效果：更闪耀 */
-        .link-item:hover {
-            transform: scale(1.1);
-            /* 悬停时变为纯白色光芒感 */
-            color: #ffffff; /* 保持白色 */
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)); /* 悬停时增加白色发光 */
-        }
-
-        /* 响应式适配 */
-        @media (max-width: 768px) {
-            .link-item {
-                font-size: 26px;
-                margin: 18px 0;
-            }
-            .link-container {
-                padding: 25px 35px;
-                width: 85%;
-            }
-        }
-    </style>
+        @media (max-width: 480px) {
+            .link-item { font-size: 20px; }
+        }
+    </style>
 </head>
 <body>
-    <div class="link-container">
-        <a href="https://m518.mos077.com/" class="link-item">皇冠会员入口1</a>
-        <a href="https://m473.mos077.com/" class="link-item">皇冠会员入口2</a>
-        <a href="https://mos066.com/f" class="link-item">皇冠会员入口3</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口1</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口2</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口3</a>
-    </div>
+    <div class="link-container">
+        <a href="https://m518.mos077.com/" class="link-item">皇冠会员入口1</a>
+        <a href="https://m473.mos077.com/" class="link-item">皇冠会员入口2</a>
+        <a href="https://mos066.com/f" class="link-item">皇冠会员入口3</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口1</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口2</a>
+        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口3</a>
+    </div>
 </body>
 </html>
