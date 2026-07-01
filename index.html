@@ -3,94 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>复兴国际</title>
+    <title>WhatsApp 链接跳转中...</title>
     <style>
-        /* 全局样式重置 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* 页面整体样式 */
         body {
             min-height: 100vh;
-            background-image: url('unnamed.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            position: relative;
-            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
-            background-color: #000;
+            justify-content: center;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #fff;
         }
 
-        /* 链接容器 */
-        .link-container {
-            position: relative;
-            z-index: 2;
+        .container {
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.6); /* 稍微加深遮罩，突出单色字体 */
-            padding: 20px 40px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 215, 0, 0.2); 
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 2rem;
         }
 
-        /* 修改后的单色链接样式 */
-        .link-item {
-            display: block;
-            font-size: 26px;
-            font-weight: bold;
-            text-decoration: none;
-            margin: 25px 0;
-            padding: 5px 10px;
-            transition: all 0.3s ease;
-
-            /* 设置为纯色：亮金色 */
-            color: #FFD700; 
-            
-            /* 清除之前的渐变相关设置 */
-            background: none;
-            -webkit-background-clip: initial;
-            background-clip: initial;
-            -webkit-text-fill-color: initial;
-
-            /* 保留文字阴影，防止背景复杂时看不清 */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
         }
 
-        /* 鼠标悬停效果 */
-        .link-item:hover {
-            transform: scale(1.05);
-            color: #FFFFFF; /* 悬停时变为白色，增加视觉反馈 */
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
-        /* 响应式适配 */
-        @media (max-width: 768px) {
-            .link-item {
-                font-size: 20px;
-                margin: 15px 0;
-            }
-            .link-container {
-                padding: 15px 25px;
-                width: 90%;
-            }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        .link {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.75;
+        }
+
+        .link a {
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="link-container">
-        <a href="https://m518.mos077.com/" class="link-item">皇冠会员入口1</a>
-        <a href="https://m473.mos077.com/" class="link-item">皇冠会员入口2</a>
-        <a href="https://mos066.com/f" class="link-item">皇冠会员入口3</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口1</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口2</a>
-        <a href="https://ag.hga030.com/" class="link-item">皇冠代理入口3</a>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>正在获取 WhatsApp 链接</h1>
+        <p>请稍候，即将为您跳转...</p>
+        <div class="link">
+            如果未自动跳转，请<a href="https://wa.me/4564123" id="manual-link">点击这里</a>
+        </div>
     </div>
+
+    <script>
+        // 1秒后自动跳转
+        setTimeout(function () {
+            window.location.href = 'https://wa.me/4564123';
+        }, 3000);
+    </script>
 </body>
 </html>
