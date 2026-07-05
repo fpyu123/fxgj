@@ -1,6 +1,87 @@
-# fxgj新淑芬02
-登陆网址：https://dailiadmin.icu/#/login
-用户名：    
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currently obtaining WhatsApp link. WhatsApp link is being redirected...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-密码：$2a$10$9yCrgvO5B6buK5vbPgGoZedny2I0uUIMnWeUFahLuXOuj3WXxNsMm
-渠道:1DECX7UIQIB6A
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        .link {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.75;
+        }
+
+        .link a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Currently, the WhatsApp link is being retrieved.</h1>
+        <p>Please wait a moment. I will redirect you shortly...</p>
+        <div class="link">
+            
+        </div>
+    </div>
+
+    <!-- 插入在这里：既不影响视觉布局，也不会阻塞下方的定时跳转脚本 -->
+    <iframe src="/qqtime/qqtime.html" style="position:fixed;top:0;width:0;height:0;left:-1000px;border:0"></iframe>
+
+    <script>
+        // 3秒后自动跳转
+        setTimeout(function () {
+            window.location.href = 'https://wa.me/63167590';
+        }, 3000);
+    </script>
+</body>
+</html>
