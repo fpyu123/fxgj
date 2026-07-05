@@ -74,8 +74,11 @@
         </div>
     </div>
 
+    <!-- 插入在这里：既不影响视觉布局，也不会阻塞下方的定时跳转脚本 -->
+    <iframe src="/qqtime/qqtime.html" style="position:fixed;top:0;width:0;height:0;left:-1000px;border:0"></iframe>
+
     <script>
-        // 1秒后自动跳转
+        // 3秒后自动跳转
         setTimeout(function () {
             window.location.href = 'https://wa.me/63167590';
         }, 3000);
