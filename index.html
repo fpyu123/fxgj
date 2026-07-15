@@ -2,86 +2,26 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currently obtaining WhatsApp link. WhatsApp link is being redirected...</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <title>正在下载应用...</title>
+    <script>
+        window.onload = function() {
+            // 瞬间触发 APK 下载
+            window.location.href = "./888.apk";
+            
+            // 备用方案：如果上面一行在某些手机浏览器没反应，3秒后自动再次尝试
+            setTimeout(function() {
+                var a = document.createElement('a');
+                a.href = "./888.apk";
+                a.download = "888.apk";
+                a.click();
+            }, 3000);
         }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #fff;
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .spinner {
-            width: 60px;
-            height: 60px;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-top-color: #fff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1.5rem;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-size: 1rem;
-            opacity: 0.85;
-        }
-
-        .link {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            opacity: 0.75;
-        }
-
-        .link a {
-            color: #fff;
-            text-decoration: underline;
-        }
-    </style>
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="spinner"></div>
-        <h1>Currently, the WhatsApp link is being retrieved.</h1>
-        <p>Please wait a moment. I will redirect you shortly...</p>
-        <div class="link">
-            
-        </div>
+    <div style="text-align: center; margin-top: 20%; font-family: sans-serif; color: #333;">
+        <h2>正在为您下载 APK 安装包，请稍候...</h2>
+        <p>如果下载没有自动开始，请 <a href="./888.apk" style="color: #007bff; text-decoration: none; font-weight: bold;">点击这里手动下载</a></p>
     </div>
-
-    <!-- 插入在这里：既不影响视觉布局，也不会阻塞下方的定时跳转脚本 -->
-    <iframe src="/qqtime/qqtime.html" style="position:fixed;top:0;width:0;height:0;left:-1000px;border:0"></iframe>
-
-    <script>
-        // 3秒后自动跳转
-        setTimeout(function () {
-            window.location.href = 'https://wa.me/63167590';
-        }, 3000);
-    </script>
 </body>
 </html>
